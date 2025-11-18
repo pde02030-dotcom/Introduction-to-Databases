@@ -1,4 +1,4 @@
-# Create Schema
+# 📌 Create Schema
 ```sql
 CRAETE SCHEMA `slqtests` ;
 ```
