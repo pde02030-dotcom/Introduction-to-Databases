@@ -16,7 +16,7 @@
 
 예:
 
-```
+```sql
 CREATE TABLE DEPARTMENT (
     DEPT_ID INT PRIMARY KEY,
     NAME VARCHAR(100)
@@ -30,7 +30,7 @@ CREATE TABLE EMPLOYEE (
 );
 ```
 
-```
+```sql
 CREATE TABLE customers (
     id INT PRIMARY KEY,
     name VARCHAR(100)
@@ -47,7 +47,7 @@ ON DELETE CASCADE
 ON UPDATE CASCADE;
 ```
 
-```
+```sql
 ALTER TABLE orders
 ADD CONSTRAINT fk_orders_customer
 FOREIGN KEY (customer_id)
@@ -76,7 +76,7 @@ ON UPDATE CASCADE;
 
 예:
 
-```
+```sql
 FOREIGN KEY (DEPT_ID) REFERENCES DEPARTMENT(DEPT_ID)
     ON DELETE CASCADE
     ON UPDATE CASCADE
@@ -90,7 +90,7 @@ FOREIGN KEY (DEPT_ID) REFERENCES DEPARTMENT(DEPT_ID)
 -   조인 성능 향상
 -   ON DELETE/UPDATE 시 무결성 검사 효율
 
-```
+```sql
 CREATE INDEX idx_emp_dept_id ON EMPLOYEE(DEPT_ID);
 ```
 
@@ -135,12 +135,13 @@ CREATE INDEX idx_emp_dept_id ON EMPLOYEE(DEPT_ID);
 
 📚 부록: 실전 SQL 예제
 
-```
+```sql
 -- 1. 부모 테이블
 CREATE TABLE CATEGORY (
     ID INT PRIMARY KEY,
     NAME VARCHAR(50)
 );
+
 
 -- 2. 자식 테이블
 CREATE TABLE PRODUCT (
